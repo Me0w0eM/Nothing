@@ -41,8 +41,8 @@
 
     Object.keys(ammo).forEach(key => {
         if(ammo[key].type === "ammo") {
-            ammo[key].lootImg.tint = ammo[ammoType].lootImg.tint;
-            ammo[key].lootImg.tintDark = ammo[ammoType].lootImg.tintDark;
+            ammo[key].lootImg.tint = ammo["762mm"].lootImg.tint;
+            ammo[key].lootImg.tintDark = ammo["762mm"].lootImg.tintDark;
         }
     })
 })();
