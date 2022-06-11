@@ -58,6 +58,7 @@
         display: none;
         text-align: center;
         border-radius: 25px;
+        border: 2px solid;
     `;
     document.body.appendChild(wrapper);
 
