@@ -1,5 +1,5 @@
 # Plugins
-Surviv.io plugins for mobile and pc.
+Plugins for mobile and pc.
 
 ## How to use the scripts
 ### Mobile
