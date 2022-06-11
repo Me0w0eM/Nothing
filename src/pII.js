@@ -70,7 +70,7 @@
         position: absolute;
         width: 10%;
         height: 5%;
-        top: 10%;
+        top: 20%;
         left: 1%;
     `;
 
