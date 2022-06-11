@@ -44,7 +44,7 @@
         color: white;
     `;
 
-    s.innerText = target;
+    s.innerText = skin[target].name;
     wrapper.appendChild(s);
 
     wrapper.style.cssText = `
@@ -94,7 +94,7 @@
 
             i.addEventListener("click", () => {
                 changeSkin(key);
-                s.innerText = key;
+                s.innerText = skin[key].name;
             });
 
             i.addEventListener("mouseover", () => {
