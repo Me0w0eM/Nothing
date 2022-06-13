@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Surviv.io plugin [5]
+// @name         Get All Skin | Surviv.io
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @icon         https://static.wikia.nocookie.net/survivio/images/8/86/Awm.png/revision/latest?cb=20180728101224
