@@ -18,4 +18,4 @@
 **NOTE**: If you are running scripts on mobile, it may increase the amount of lag.
 
 ### Get All Skins
-https://www.icloud.com/shortcuts/9722e4127/ea64adab70c229efa2aa7c4
+https://www.icloud.com/shortcuts/f512b7e4bfec46e188b9dbc88c0484fa
