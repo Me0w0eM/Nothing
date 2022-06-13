@@ -1,3 +1,16 @@
+// ==UserScript==
+// @name         Surviv.io plugin [5]
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @icon         https://static.wikia.nocookie.net/survivio/images/8/86/Awm.png/revision/latest?cb=20180728101224
+// @description  Plugins for surviv.io
+// @author       Me0w0
+// @match        https://surviv.io
+// @match        https://surviv.io/*
+// @grant        none
+// ==/UserScript==
+
+
 (function() {
     'use strict';
 
@@ -17,24 +30,6 @@
 
     if (typeof window.webpackJsonp === 'function') window.webpackJsonp([0], func, ["webpack_inject"]);
     else window.webpackJsonp.push([ ["webpack_inject"], func, [["webpack_inject"]] ]);
-
-    // Function to change skin
-    const changeSkin = function(skinName) {
-        targetSkin = skin[skinName];
-
-        // Loop through every skin and change it to target skin
-        Object.keys(skin).forEach(key => {
-            if (skin[key].type === "outfit") { // Checks if it is a skin
-                for (let i in skin[key].skinImg) {
-                    skin[key].skinImg[i] = targetSkin.skinImg[i]; // Change all the of skin's properties to the target skin
-                }
-
-                if ("accessory" in targetSkin) skin[key].accessory = targetSkin.accessory; // If the target skin has accessories, add that too
-            }
-        })
-
-        window.localStorage.setItem("curSkin", skinName); // Sets the current skin in local storage so you don't have to pick your skin every time
-    }
 
     // DOM Elements
 
@@ -57,8 +52,13 @@
 
     // Label for which skin you picked at top of container
     const s = document.createElement("p");
-    s.style.color = "white";
-    s.innerText = target;
+    s.style.cssText = `
+        color: white;
+        font-size: 25px;
+        position: sticky;
+    `;
+
+    s.innerText = skin[target].name;
     wrapper.appendChild(s);
 
     // Button to open and close the container
@@ -105,6 +105,25 @@
         }
     })
 
+    // Function to change skin
+    const changeSkin = function(skinName) {
+        targetSkin = skin[skinName];
+
+        // Loop through every skin and change it to target skin
+        Object.keys(skin).forEach(key => {
+            if (skin[key].type === "outfit") { // Checks if it is a skin
+                for (let i in skin[key].skinImg) {
+                    skin[key].skinImg[i] = targetSkin.skinImg[i]; // Change all the of skin's properties to the target skin
+                }
+
+                if ("accessory" in targetSkin) skin[key].accessory = targetSkin.accessory; // If the target skin has accessories, add that too
+            }
+        })
+
+        s.innerText = targetSkin.name;
+        window.localStorage.setItem("curSkin", skinName); // Sets the current skin in local storage so you don't have to pick your skin every time
+    }
+
     // Loop through every skin and add it to the container
     Object.keys(skin).forEach(key => {
         if (skin[key].type === "outfit") {
@@ -114,10 +133,7 @@
             wrapper.appendChild(i); // Add it to the container
 
             // Change the skin when it is clicked
-            i.addEventListener("click", () => {
-                changeSkin(key);
-                s.innerText = key;
-            });
+            i.addEventListener("click", () => { changeSkin(key) });
 
             // Hover effects
             i.addEventListener("mouseover", () => { i.style.backgroundColor = "red" })
