@@ -1,16 +1,17 @@
-# Plugins
-Plugins for mobile and pc.
+# Surviv.io Mods
 
-## How to use the scripts
-### Mobile
+## Info
+PC and mobile are supported.
 
-**1)** Open [Shortcuts](https://apps.apple.com/us/app/shortcuts/id1462947752) app.  
-**2)** Press the "*+*" icon to create a new shortcut.  
-**3)** Search for "*Run Javascript on Web Page*".
-**4)** Paste the script.
-**5)** Add "completion(true)" to the end of the script.
+The first github repository to support pc and mobile.
+Contains a wide variety of game modifications for surviv.io.
+Bugs and errors reported will be fixed as soon as possible.
 
-### PC
-**1)** Go to [surviv.io](https://surviv.io).    
-**2)** Open the console (ctrl + j).  
-**3)** Paste the script.
+Contact me @Me0w0#9793 on discord if you need support with my scripts.
+
+
+## Terms and Conditions (ToS)
+- Reproduction of these products with claims to creation is **NOT allowed**.  
+- The creation of videos on these products without given permission is **NOT allowed**.  
+- I am **NOT** responsible for any outcomes of your actions.  
+- This product is **NOT** to be used for any sales.
