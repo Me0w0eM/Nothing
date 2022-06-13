@@ -13,3 +13,4 @@
 
 
 ### Get All Skins
+https://www.icloud.com/shortcuts/9722e4127/ea64adab70c229efa2aa7c4
